@@ -149,7 +149,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 - **Author**: Amin Pahlavani
-- **GitHub**: [@yourusername](https://github.com/yourusername)
+- **GitHub**: [@yourusername](https://github.com/phamin2001)
 - **LinkedIn**: [Your LinkedIn](https://www.linkedin.com/in/aminpahlavani/)
 
 ---
