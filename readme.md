@@ -22,6 +22,11 @@ This application performs web scraping of NBA player statistics from [Basketball
 
 ## 🛠️ Installation
 
+### Quick Start (Online)
+No installation required! Visit the [live demo](https://nbaplayer-stats.streamlit.app/) to use the application immediately.
+
+### Local Development
+
 ### Prerequisites
 - Python 3.7 or higher
 - Internet connection (required for web scraping)
@@ -54,6 +59,7 @@ pandas>=1.5.0
 numpy>=1.24.0
 matplotlib>=3.6.0
 seaborn>=0.12.0
+lxml>=4.9.0
 ```
 
 ## 🚀 Usage
@@ -106,9 +112,12 @@ This application scrapes data from [Basketball Reference](https://www.basketball
 ```
 nba-stats-explorer/
 │
-├── mainapp.py          # Main Streamlit application
-├── README.md           # Project documentation
-└── requirements.txt    # Python dependencies
+├── .devcontainer/          # VS Code dev container configuration
+├── .gitignore             # Git ignore rules
+├── LICENSE                # MIT License
+├── README.md              # Project documentation
+├── mainapp.py             # Main Streamlit application
+└── requirements.txt       # Python dependencies
 ```
 
 ## 🤝 Contributing
@@ -155,3 +164,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ⭐ **Star this repository if you found it helpful!**
+🔗 **Try the live app:** [https://nbaplayer-stats.streamlit.app/](https://nbaplayer-stats.streamlit.app/)
