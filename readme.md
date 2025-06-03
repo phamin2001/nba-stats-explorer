@@ -30,7 +30,7 @@ This application performs web scraping of NBA player statistics from [Basketball
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/nba-stats-explorer.git
+   git clone https://github.com/phamin2001/nba-stats-explorer.git
    cd nba-stats-explorer
    ```
 
