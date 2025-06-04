@@ -53,6 +53,10 @@ def load_data(year):
         raw = df.drop(df[df.Age == 'Age'].index)
     else:
         raw = df
+    # The website uses the column name 'Tm' for teams. Rename it for clarity
+    if 'Tm' in raw.columns:
+        raw = raw.rename(columns={'Tm': 'Team'})
+
     raw = raw.fillna('N/A')
     raw = raw.drop(['Rk'], axis=1)
     return raw
@@ -70,8 +74,8 @@ selected_pos = st.sidebar.multiselect('Position', unique_pos, unique_pos)
 st.header('Display Player Stats of Selected Teams(s)')
 df_selected_team = playersstats[(playersstats.Team.isin(selected_team)) & 
                                 (playersstats.Pos.isin(selected_pos))]
-st.write('Data Dimesion: ' + str(df_selected_team.shape[0]) + ' rows and ' + 
-         str(df_selected_team.shape[1]))
+st.write('Data Dimension: ' + str(df_selected_team.shape[0]) + ' rows and ' +
+         str(df_selected_team.shape[1]) + ' columns')
 st.dataframe(df_selected_team)
 
 # Download NBA player stats data
@@ -108,8 +112,6 @@ if st.button('Intercorrelation Heatmap'):
     if df_numeric.empty:
         st.error("No numeric data available for correlation analysis after cleaning")
     elif df_numeric.shape[1] < 2:
-        st.error("Not enough numeric columns for correlation analysis")
-    if df_numeric.shape[1] < 2:
         st.error("Not enough numeric data for correlation analysis")
     else:
         corr = df_numeric.corr()
