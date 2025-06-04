@@ -70,7 +70,7 @@ selected_pos = st.sidebar.multiselect('Position', unique_pos, unique_pos)
 st.header('Display Player Stats of Selected Teams(s)')
 df_selected_team = playersstats[(playersstats.Team.isin(selected_team)) & 
                                 (playersstats.Pos.isin(selected_pos))]
-st.write('Data Dimesion: ' + str(df_selected_team.shape[0]) + ' rows and ' + 
+st.write('Data Dimension: ' + str(df_selected_team.shape[0]) + ' rows and ' + 
          str(df_selected_team.shape[1]))
 st.dataframe(df_selected_team)
 
@@ -108,8 +108,6 @@ if st.button('Intercorrelation Heatmap'):
     if df_numeric.empty:
         st.error("No numeric data available for correlation analysis after cleaning")
     elif df_numeric.shape[1] < 2:
-        st.error("Not enough numeric columns for correlation analysis")
-    if df_numeric.shape[1] < 2:
         st.error("Not enough numeric data for correlation analysis")
     else:
         corr = df_numeric.corr()

@@ -41,7 +41,7 @@ No installation required! Visit the [live demo](https://nbaplayer-stats.streamli
 
 2. **Install required packages**
    ```bash
-   pip install streamlit pandas numpy matplotlib seaborn
+   pip install streamlit pandas numpy matplotlib seaborn lxml
    ```
 
 3. **Run the application**
